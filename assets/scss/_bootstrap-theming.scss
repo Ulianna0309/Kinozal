@@ -1,24 +1,104 @@
-.navbar-expand-lg .navbar-nav .nav-link{
-    transition: 0.5s;
-    color: #9d9d9d;
-    border-radius: 4px;
-    padding: 13px 15px;
-    margin: 5px 5px 5px 0;
+.navbar-inverse{
+    background-color: darken($color-dark, 4%);
+
+    .navbar-nav{
+        @include sm{
+            margin: ($gap/2) -15px;
+        }
+        >li>a {
+            transition: background-color 0.5s;
+
+            @include sm-min{
+                border-radius: 4px;
+            }
+            @include sm{
+                text-align: center;
+            }
+            
+            &:focus,
+            &:hover {
+            background-color: $color-primary;
+            }
+        }
+
+            >.active>a{
+            background-color: $color-primary-dark;
+
+            &:focus, 
+            &:hover {
+            background-color: $color-primary-light;
+            }
+        }
+    }
 }
-.navbar-expand-lg .navbar-nav .nav-link:hover,
-.navbar-expand-lg .navbar-nav .nav-link:focus{
-    background-color: $color-primary;
-    color: $color-light;
+ 
+.navbar{
+    margin-bottom: 0;
+    &-header{
+        text-align: center;
+    }
+
+    &-right{
+        margin-right: 0;
+    
+        li{
+            margin: 5px 5px 5px 0;
+            
+                @include sm{
+                    margin: 0 0 5px 0;
+                }
+            }
+        }
+        &-left {
+            li {
+            margin: 5px 0 5px 5px ;
+
+            @include sm{
+                margin: 5px 0 0 0;
+            }
+        }
+    }
+    &-toggle{
+        margin-right: 0;
+        float: none;
+    }
 }
-.navbar-expand-lg .navbar-nav .nav-link.active{
-    background-color: $color-primary-dark;
-    color: $color-light;
-    transition: 0.5s; 
+.panel{
+    margin-bottom: $gap*2;
+    &-info {
+        border: none;
+        background: darken($color-light, 8%);
+
+        >.panel-heading {
+            color: $color-light;
+            background-color: $color-accent;
+            border: none;
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+        }
+    }
+    &-body{
+        border: 1px solid $color-gray;
+        border-radius: 0 0 4px 4px;
+    }
 }
-.navbar-expand-lg .navbar-nav .nav-link.active:hover,
-.navbar-expand-lg .navbar-nav .nav-link.active:focus{
-    background-color: $color-primary-light;
+.input{
+    &-lg,
+    &-group-lg>.form-control {
+        font-size: 0.875rem;
+    }
+
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

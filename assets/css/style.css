@@ -2,33 +2,82 @@
   text-shadow: 0 0 5px #000000, 0 0 20px #000000;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link {
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-  color: #9d9d9d;
-  border-radius: 4px;
-  padding: 13px 15px;
+.header, .main, .left-sidebar {
+  margin-bottom: 80px;
+}
+
+.navbar-inverse {
+  background-color: #191919;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  -webkit-transition: background-color 0.5s;
+  -o-transition: background-color 0.5s;
+  transition: background-color 0.5s;
+}
+
+.navbar-inverse .navbar-nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+  background-color: #165690;
+}
+
+.navbar-inverse .navbar-nav > .active > a {
+  background-color: #053159;
+}
+
+.navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+  background-color: #517ba2;
+}
+
+.navbar {
+  margin-bottom: 0;
+}
+
+.navbar-header {
+  text-align: center;
+}
+
+.navbar-right {
+  margin-right: 0;
+}
+
+.navbar-right li {
   margin: 5px 5px 5px 0;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link:hover,
-.navbar-expand-lg .navbar-nav .nav-link:focus {
-  background-color: #165690;
-  color: #ffffff;
+.navbar-left li {
+  margin: 5px 0 5px 5px;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link.active {
-  background-color: #053159;
-  color: #ffffff;
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
+.navbar-toggle {
+  margin-right: 0;
+  float: none;
 }
 
-.navbar-expand-lg .navbar-nav .nav-link.active:hover,
-.navbar-expand-lg .navbar-nav .nav-link.active:focus {
-  background-color: #517ba2;
+.panel {
+  margin-bottom: 30px;
+}
+
+.panel-info {
+  border: none;
+  background: #ebebeb;
+}
+
+.panel-info > .panel-heading {
+  color: #ffffff;
+  background-color: #df8a13;
+  border: none;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+}
+
+.panel-body {
+  border: 1px solid #dddddd;
+  border-radius: 0 0 4px 4px;
+}
+
+.input-lg,
+.input-group-lg > .form-control {
+  font-size: 0.875rem;
 }
 
 html {
@@ -39,6 +88,15 @@ html {
 body {
   font-size: 1rem;
   font-family: "PT Sans", sans-serif;
+}
+
+a {
+  color: #165690;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+  color: #df8a13;
 }
 
 .header-logo {
@@ -53,10 +111,7 @@ body {
 .header-logo__title {
   display: block;
   color: #df8a13;
-  font-size: 3.5rem;
   font-family: "PT Serif", serif;
-  letter-spacing: 0.33em;
-  margin-right: -15px;
 }
 
 .header-logo__subtitle {
@@ -66,8 +121,126 @@ body {
   letter-spacing: 0.2em;
 }
 
-.navbar {
+.panel:last-child {
   margin-bottom: 0;
-  border-color: transparent;
-  background-color: #191919;
+}
+
+.vertical-slider {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.vertical-slider__img {
+  width: 100%;
+}
+
+.user-login {
+  position: relative;
+}
+
+.user-login__tabs {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  border: none;
+}
+
+.user-login__tabs a {
+  color: #dddddd !important;
+  border: none !important;
+  background-color: transparent !important;
+  padding: 14px 5px 12px !important;
+}
+
+.user-login__tabs .active > a {
+  color: #ffffff !important;
+}
+
+.news-items {
+  clear: both;
+  position: relative;
+}
+
+.news-items:hover a {
+  color: #df8a13;
+}
+
+.news-items:hover .news-items__img {
+  background-color: #df8a13;
+  border: #df8a13;
+}
+
+.news-items:not(:last-child) {
+  min-height: 85px;
+  margin-bottom: 15px;
+}
+
+.news-items:not(:last-child)::after {
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  width: calc(100% - 85px);
+  height: 1px;
+  content: "";
+  background-color: #dddddd;
+}
+
+.news-items__img {
+  float: left;
+  width: 75px;
+  margin: 0 10px 10px 0;
+}
+
+.news-items__title {
+  display: -webkit-box;
+  overflow: hidden;
+  height: 50px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin-bottom: 10px;
+}
+
+.news-items__date {
+  text-align: right;
+  font-size: 0.8rem;
+  color: #909090;
+}
+
+@media (min-width: 576px) {
+  .header-logo__title {
+    font-size: 3.5rem;
+    letter-spacing: 0.33em;
+    margin-right: -15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-inverse .navbar-nav > li > a {
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 767.8px) {
+  .navbar-inverse .navbar-nav {
+    margin: 7.5px -15px;
+  }
+  .navbar-inverse .navbar-nav > li > a {
+    text-align: center;
+  }
+  .navbar-right li {
+    margin: 0 0 5px 0;
+  }
+  .navbar-left li {
+    margin: 5px 0 0 0;
+  }
+}
+
+@media (max-width: 575.8px) {
+  .header-logo__title {
+    font-size: 2.5rem;
+    letter-spacing: 0.2em;
+    margin-right: -5px;
+  }
 }
