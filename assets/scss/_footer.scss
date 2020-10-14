@@ -1,0 +1,20 @@
+.footer{
+    padding-top: $gap*3;
+    color: #fbfbfb;
+    background-color: #232323;
+
+    &-items__list{
+        padding: 0;
+    }
+    a{
+        color: #777777;
+    }
+    &-bottom{
+        margin: 20px 0;
+        text-align: center;
+
+        &__link{
+            color: #fbfbfb !important;
+        }
+    }
+}
