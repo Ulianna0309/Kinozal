@@ -272,6 +272,71 @@ ul {
   transition: background-color 0.25s;
 }
 
+/*film-about*/
+.film-about {
+  font-size: 1.2rem;
+}
+
+.film-about__video {
+  border: 1px solid #dddddd;
+  border-bottom: none;
+  border-radius: 4px 4px 0 0;
+}
+
+.film-about__video-item {
+  width: 100%;
+}
+
+.film-about__desc {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.film-about__desc-badge {
+  font-size: 0.8em;
+}
+
+.film-about__desc-text {
+  margin-right: 15px;
+}
+
+.film-about__desc-text:last-child {
+  margin-right: 0;
+}
+
+.well {
+  border-color: #dddddd;
+  background-color: #f1f1f1;
+}
+
+.contact__textarea::-webkit-input-placeholder {
+  display: block !important;
+}
+
+.contact__textarea::-moz-placeholder {
+  display: block !important;
+}
+
+.contact__textarea:-ms-input-placeholder {
+  display: block !important;
+}
+
+.contact__textarea::-ms-input-placeholder {
+  display: block !important;
+}
+
+.contact__textarea::placeholder {
+  display: block !important;
+}
+
+.contact__btn {
+  float: right;
+}
+
+.reviews .reviews-panel {
+  margin-bottom: 30px !important;
+}
+
 .panel:last-child {
   margin-bottom: 0;
 }

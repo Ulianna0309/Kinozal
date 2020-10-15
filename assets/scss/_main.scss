@@ -86,3 +86,49 @@
         transition: background-color 0.25s;
     }
 }
+/*film-about*/
+.film-about{ 
+    font-size: 1.2rem;
+
+    &__video{
+        border: 1px solid #dddddd;
+        border-bottom: none;
+        border-radius: 4px 4px 0 0;
+        
+        
+        &-item{
+            width: 100%;
+        }
+    }
+    &__desc{
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+
+       &-badge{
+           font-size: 0.8em;
+       }
+
+        &-text{
+            margin-right: $gap;
+
+            &:last-child{
+                margin-right: 0;
+            }
+        }
+    }
+}
+.well {
+    border-color: #dddddd;
+    background-color: $color-film;
+}
+.contact{
+    &__textarea::placeholder{
+        display: block !important;
+    }
+    &__btn{
+        float: right;
+    }
+}
+.reviews .reviews-panel{
+    margin-bottom: 30px !important;
+}
