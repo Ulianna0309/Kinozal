@@ -65,6 +65,7 @@
 }
 .panel{
     margin-bottom: $gap*2;
+    
     &-info {
         border: none;
         background: darken($color-light, 8%);

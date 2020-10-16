@@ -438,22 +438,22 @@ ul {
   margin-left: -1px;
   color: #165690 !important;
   padding-right: 55px;
+  transition: none;
 }
 
 .top-films__item:first-child {
   border-top: none;
-  border-radius: none;
 }
 
 .top-films__item:last-child {
   border-bottom: none;
-  border-radius: none;
 }
 
 .top-films__item:hover, .top-films__item:focus {
   background-color: #df8a13 !important;
   color: #ffffff !important;
   border: #df8a13;
+  border-radius: 0;
 }
 
 .top-films__item:hover .badge, .top-films__item:focus .badge {

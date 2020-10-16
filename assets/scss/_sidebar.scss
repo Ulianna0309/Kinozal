@@ -78,9 +78,10 @@
     }   
 }
 .top-films{
-
+       
     &__items{
-       padding: 15px 0;
+       padding-right: 0;
+       padding-left: 0;
     }    
     &__list{
         margin-bottom: 0;
@@ -89,22 +90,23 @@
         background-color: transparent;
         margin-right: -1px;
         margin-left: -1px;
-        color: $color-primary !important;
+        color: $color-primary;
         padding-right: 55px;
+        transition: none;
 
-        &:first-child{
-            border-top: none;
-            border-radius: none;
+        &:first-child {
+            border-top: none; 
         }
         &:last-child{
-            border-bottom: none;
-            border-radius: none;
+            border-bottom: none;   
         }
         &:hover,
         &:focus{
             background-color: $color-accent !important;
             color: $color-light !important;
-            border: $color-accent;
+            border-color: $color-accent;
+            border-radius: 0 !important;
+            
             
             .badge{
                 background-color: $color-dark !important;
