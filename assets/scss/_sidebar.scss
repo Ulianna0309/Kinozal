@@ -90,15 +90,15 @@
         background-color: transparent;
         margin-right: -1px;
         margin-left: -1px;
-        color: $color-primary;
+        color: $color-primary !important;
         padding-right: 55px;
-        transition: none;
+        border: 1px solid #ddd !important;
 
         &:first-child {
-            border-top: none; 
+            border-top: 0 !important; 
         }
         &:last-child{
-            border-bottom: none;   
+            border-bottom: 0;   
         }
         &:hover,
         &:focus{
@@ -106,7 +106,6 @@
             color: $color-light !important;
             border-color: $color-accent;
             border-radius: 0 !important;
-            
             
             .badge{
                 background-color: $color-dark !important;
